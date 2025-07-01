@@ -1,16 +1,25 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
 
-
-@layer base{
+@layer components{
     body{
-        background:bg-dark;
-    }
-    h1{
-        @apply text-red-700;
+        background-color:#0d1117;
+        color:white;
     }
 }
-@layer components{
-    .testing{
-        @apply bg-red-700;
-    }
+
+@utility home1{
+    @apply  min-h-[calc(100vh-4rem)] flex flex-col text-center pt-35 items-center md:gap-6 md:pt-45 md:justify-start;
+}
+@utility home1-h1{
+    @apply sm:font-bold font-medium md:text-6xl md:w-150 sm:w-120 text-3xl w-85 ;
+}
+@utility home1-p{
+    @apply md:text-2xl md:w-150  sm:w-120 text-xl w-80;
+}
+
+@utility home2{
+    @apply  flex flex-col text-center items-center justify-center gap-4;
+}
+@utility home2-h1{
+    @apply text-lg font-bold; 
 }
