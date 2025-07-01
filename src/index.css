@@ -1,1 +1,16 @@
 @import 'tailwindcss'
+
+
+@layer base{
+    body{
+        background:bg-dark;
+    }
+    h1{
+        @apply text-red-700;
+    }
+}
+@layer components{
+    .testing{
+        @apply bg-red-700;
+    }
+}

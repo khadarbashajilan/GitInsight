@@ -1,0 +1,7 @@
+@import 'tailwindcss'
+
+@layer components{
+    .testing{
+        @apply bg-red-700;
+    }
+}

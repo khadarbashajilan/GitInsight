@@ -1,0 +1,172 @@
+[
+  {
+    "title": "Roadmap",
+    "repo-link": "https://github.com/kamranahmedse/developer-roadmap",
+    "description": "A set of well-structured roadmaps that outline the necessary skills and technologies for each path of software development."
+  },
+  {
+    "title": "Awesome",
+    "repo-link": "https://github.com/sindresorhus/awesome",
+    "description": "A curated list of high-quality resources in various fields of software development, containing awesome lists of all kinds of interesting topics."
+  },
+  {
+    "title": "Coding interview university",
+    "repo-link": "https://github.com/jwasham/coding-interview-university",
+    "description": "A comprehensive list of topics and resources for preparing for coding interviews, covering data structures, algorithms, system design, and more."
+  },
+  {
+    "title": "System design primer",
+    "repo-link": "https://github.com/donnemartin/system-design-primer",
+    "description": "An open-source collection of resources to help software engineers prepare for technical interviews related to system design."
+  },
+  {
+    "title": "Freecodecamp",
+    "repo-link": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "description": "An open-source project aimed at helping people learn to code for free with a comprehensive curriculum of coding challenges and projects."
+  },
+  {
+    "title": "Gitignore",
+    "repo-link": "https://github.com/github/gitignore",
+    "description": "A collection of .gitignore templates for various programming languages, frameworks, and tools."
+  },
+  {
+    "title": "Free For Dev",
+    "repo-link": "https://github.com/ripienaar/free-for-dev",
+    "description": "A curated list of free services, software, and resources for developers including cloud hosting, databases, and email services."
+  },
+  {
+    "title": "Every programmer should know",
+    "repo-link": "https://github.com/mtdvio/every-programmer-should-know",
+    "description": "A list of resources that every programmer should know, covering programming languages, algorithms, databases, security, and more."
+  },
+  {
+    "title": "Tensorflow",
+    "repo-link": "https://github.com/tensorflow/tensorflow",
+    "description": "A comprehensive platform for developing and deploying machine learning models, one of the most popular machine learning libraries in the world."
+  },
+  {
+    "title": "Public APIs",
+    "repo-link": "https://github.com/public-apis/public-apis",
+    "description": "A great list of APIs to play around with from various domains including sports, news, and entertainment."
+  },
+  {
+    "title": "JavaScript questions",
+    "repo-link": "https://github.com/lydiahallie/javascript-questions",
+    "description": "A vast collection of JavaScript questions ranging from beginner to advanced level, intended to help developers prepare for technical interviews."
+  },
+  {
+    "title": "Best websites a programmer should visit",
+    "repo-link": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit/",
+    "description": "A curated list of websites that programmers can use to improve their skills, learn new programming languages, and stay up-to-date with industry trends."
+  },
+  {
+    "title": "React Native Apps",
+    "repo-link": "https://github.com/ReactNativeNews/React-Native-Apps",
+    "description": "A curated list of open-source React Native apps that developers can use as examples or as a starting point for their projects."
+  },
+  {
+    "title": "Build Your Own X",
+    "repo-link": "https://github.com/codecrafters-io/build-your-own-x",
+    "description": "A curated list of tutorials and resources for building your version of popular software tools and applications from code editors to databases."
+  },
+  {
+    "title": "Tech Interview Handbook",
+    "repo-link": "https://github.com/yangshun/tech-interview-handbook",
+    "description": "A comprehensive guide for anyone preparing for technical job interviews, particularly in software engineering, covering algorithms, system design, and behavioral questions."
+  },
+  {
+    "title": "JavaScript Algorithms and Data Structures",
+    "repo-link": "https://github.com/trekhleb/javascript-algorithms",
+    "description": "A collection of various computer science algorithms and data structures implemented in JavaScript with detailed explanations."
+  },
+  {
+    "title": "Design Resources for Developers",
+    "repo-link": "https://github.com/bradtraversy/design-resources-for-developers",
+    "description": "A curated list of design-related tools and resources including color palettes, fonts, icons, stock photos, and design inspiration."
+  },
+  {
+    "title": "Project Based Learning",
+    "repo-link": "https://github.com/practical-tutorials/project-based-learning",
+    "description": "A collection of project ideas designed to help individuals learn and practice different programming and technology skills through hands-on projects."
+  },
+  {
+    "title": "Tech Jobs with Relocation",
+    "repo-link": "https://github.com/AndrewStetsenko/tech-jobs-with-relocation/",
+    "description": "A great list of tech job opportunities from companies across the world that offer relocation packages for new employees."
+  },
+  {
+    "title": "The Algorithms",
+    "repo-link": "https://github.com/TheAlgorithms",
+    "description": "A collection of algorithms implemented in various programming languages, covering sorting, searching, graph algorithms, and mathematical algorithms."
+  },
+  {
+    "title": "You Don't Know JS",
+    "repo-link": "https://github.com/getify/You-Dont-Know-JS/",
+    "description": "Multiple books that cover various aspects of JavaScript to help developers gain a deeper understanding and overcome common misconceptions."
+  },
+  {
+    "title": "Curated List of DevOps Tools",
+    "repo-link": "https://github.com/techiescamp/devops-tools/",
+    "description": "A curated collection of DevOps tools including descriptions, installation instructions, configurations, and usage examples."
+  },
+  {
+    "title": "Interviews",
+    "repo-link": "https://github.com/kdn251/interviews",
+    "description": "A comprehensive resource for technical interview preparation in software engineering covering data structures, algorithms, system design, and coding challenges."
+  },
+  {
+    "title": "What happens when",
+    "repo-link": "https://github.com/alex/what-happens-when",
+    "description": "A detailed explanation of what happens when you type google.com into your browser's address box and press enter, covering every aspect of the process."
+  },
+  {
+    "title": "30 seconds of code",
+    "repo-link": "https://github.com/Chalarangelo/30-seconds-of-code",
+    "description": "A curated collection of useful JavaScript snippets, each designed to perform a specific task in 30 seconds or less."
+  },
+  {
+    "title": "System design",
+    "repo-link": "https://github.com/karanpratapsingh/system-design",
+    "description": "A comprehensive resource covering system design principles and practical applications with real-world examples like WhatsApp and Netflix."
+  },
+  {
+    "title": "DevOps exercises",
+    "repo-link": "https://github.com/bregman-arie/devops-exercises",
+    "description": "A rich collection of 2600+ technical questions and exercises covering DevOps and SRE topics for interview preparation."
+  },
+  {
+    "title": "System Design Resources",
+    "repo-link": "https://github.com/InterviewReady/system-design-resources",
+    "description": "An extensive collection of resources for mastering system design concepts including guides, articles, and videos on various technical topics."
+  },
+  {
+    "title": "Data Structures Algorithms with Low and High Level Designs",
+    "repo-link": "https://github.com/arpit20adlakha/Data-Structure-Algorithms-LLD-HLD",
+    "description": "A comprehensive collection of theory, practice problems, and resources for mastering data structures, algorithms, and system design concepts."
+  },
+  {
+    "title": "Engineering Blogs",
+    "repo-link": "https://github.com/kilimchoi/engineering-blogs",
+    "description": "A curated list of engineering blogs categorized by companies, individual contributors, and products/technologies."
+  },
+  {
+    "title": "Resources To Become A Great Engineering Leader",
+    "repo-link": "https://github.com/gregorojstersek/resources-to-become-a-great-engineering-leader",
+    "description": "A curated list of over 100 resources for aspiring engineering leaders covering software engineering, leadership, management, and business topics."
+  },
+  {
+    "title": "DevOps Roadmap",
+    "repo-link": "https://github.com/milanm/DevOps-Roadmap",
+    "description": "A structured roadmap and learning resources for aspiring DevOps engineers covering essential areas like GIT, Linux, containers, and CI/CD."
+  },
+  {
+    "title": "Awesome System Design Resources",
+    "repo-link": "https://github.com/ashishps1/awesome-system-design-resources",
+    "description": "Resources for important design concepts to prepare for interviews, covering design tradeoffs, building blocks, and architectural patterns."
+  },
+  {
+    "title": "Design Patterns for Humans",
+    "repo-link": "https://github.com/kamranahmedse/design-patterns-for-humans",
+    "description": "An effortful approach to making design patterns easy for everyone to understand and practice with explanations in easy terms and sample code."
+  }
+]
