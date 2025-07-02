@@ -1,55 +1,54 @@
 @import "tailwindcss";
 
-@layer components{
-    body{
-        background-color:#0d1117;
-        color:white;
-    }
-    nav{
-        @apply backdrop-blur-xl shadow-xl fixed w-full md:p-3 p-2;
-        div{
-            @apply flex items-center md:gap-3 gap-2 px-2;
-            img{
-                @apply h-8 w-8 md:h-9 md:w-9;
-            }
-            /* h1{
+@layer components {
+  body {
+    background-color: #0d1117;
+    color: white;
+  }
+  nav {
+    @apply backdrop-blur-xl shadow-xl fixed w-full md:p-3 p-2;
+    div {
+      @apply flex items-center md:gap-3 gap-2 px-2;
+      img {
+        @apply h-8 w-8 md:h-9 md:w-9;
+      }
+      /* h1{
                 @aaply ;
             } */
-        }
     }
-    form{
-        @apply flex flex-col md:flex-row md:mt-2 mt-4 gap-5;
-        input{
-            @apply p-2 md:px-3 border-blue-500 border-1 rounded;
-        }
-        button{
-            @apply font-bold p-1 border border-transparent hover:border-blue-500 transition duration-200 px-4 py-2;
-        }
+  }
+  form {
+    @apply flex flex-col md:flex-row md:mt-2 mt-4 gap-5;
+    input {
+      @apply p-2 md:px-3 border-blue-500 border-1 rounded;
     }
-
+    button {
+      @apply font-bold p-1 border border-transparent hover:border-blue-500 transition duration-200 px-4 py-2;
+    }
+  }
 }
 
-@utility home-page1{
-    @apply  min-h-[calc(100vh-4rem)] flex flex-col text-center pt-35 items-center md:gap-6 md:pt-45 md:justify-start;
-    h1{
-        @apply sm:font-bold font-medium md:text-6xl md:w-150 sm:w-120 text-3xl w-85 ;
-    }
-    p{
-        @apply md:text-2xl md:w-150 sm:w-120 text-xl w-80;
-    }       
+@utility home-page1 {
+  @apply min-h-[calc(100vh-4rem)] flex flex-col text-center pt-35 items-center md:gap-6 md:pt-45 md:justify-start;
+  h1 {
+    @apply sm:font-bold font-medium md:text-6xl md:w-150 sm:w-120 text-3xl w-85;
+  }
+  p {
+    @apply md:text-2xl md:w-150 sm:w-120 text-xl w-80;
+  }
 }
 
-@utility home-page2{
-    @apply  flex flex-col text-center items-center justify-center gap-4 ;
-    h1{
-        @apply md:text-3xl md:font-bold md:m-4;
-    }
+@utility home-page2 {
+  @apply flex flex-col text-center items-center justify-center gap-4;
+  h1 {
+    @apply md:text-3xl md:font-bold md:m-4;
+  }
 }
 
-@utility home-page3{
-    @apply  flex  justify-center items-center text-center;
+@utility home-page3 {
+  @apply flex  justify-center items-center text-center;
 }
-    
-@utility repos{
-    @apply  lg:text-lg text-sm;
+
+@utility repos {
+  @apply lg:text-lg text-sm;
 }
