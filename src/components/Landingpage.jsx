@@ -4,47 +4,44 @@ import profile from "../assets/landingpage/user.svg";
 import analyze from "../assets/landingpage/analyze.svg";
 import search from "../assets/landingpage/search.svg";
 import Popularrepos from "./landinpagecomponents/Popularrepos";
-// import axios from 'axios';
+import axios from 'axios';
+const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
 
-const Landingpage = () => {
+const Landingpage = ({setData}) => {
   
-  const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
   const [username, setusername]= useState('');
   const [isLoading, setisLoading]= useState(false);
   const [error, setError]= useState(false);
-  // const [submittedUsername, setsubmittedUsername]= useState('');
-  console.log(API_KEY)
+
+  // const[reopsData,setreposData]=useState();
+  
   const handleSubmit=(e)=>{
     setisLoading(true);
     e.preventDefault();
-    // setusername(username);
-    console.log(username);
-    fetchData(username);
+    username.trim();
+    fetchUserprofile(username);
   }
-
-  const fetchData = async (username) =>{
-    try{
-      username.trim();
-      const res = await fetch(`https://api.github.com/users/${username}`);
-      if(!res.ok) throw new Error ('User Not Found');
-      const result = await res.json();
-      console.log(result);
-      setisLoading(false);
-      setusername('');
-    }
-    catch(e){
-      console.log("ERROR"+e);
-      setError(!error);
-      setisLoading(false);
-      setusername('')
-    }
+  
+  const fetchUserprofile = async (username) => {
+  try {
+    const res = await axios.get(`https://api.github.com/users/${username}`, {
+      headers: {
+        'Authorization':`Bearer ${API_KEY}` ,
+        // 'X-GitHub-Api-Version': '2022-11-28',
+      },
+    });
+    const result = res.data;
+    console.log(result);
+    setData(result);
+    setisLoading(false);
+    setusername('');
+  } catch (e) {
+    console.log("ERROR: ", e.message); 
+    setError(true);
+    setisLoading(false);
+    setusername('');
   }
-
-  const id = setInterval((error)=>{
-    setError(!error);
-  },2000)
-
-  clearInterval(id);
+};
 
 
   return (
