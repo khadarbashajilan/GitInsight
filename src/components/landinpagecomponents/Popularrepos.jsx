@@ -1,7 +1,7 @@
 import React from "react";
 import repos from "./github_repos.json";
 const Popularrepos = () => {
-  console.log(repos);
+  // console.log(repos);
 
   return (
     <>
@@ -12,6 +12,7 @@ const Popularrepos = () => {
         {repos.map((ele, idx) => {
           return (
             <div
+              key={idx}
               className="cursor-pointer border rounded-2xl w-50 h-50 gap-4 p-2 flex hover:border-blue-500 transition duration-200  flex-col items-center justify-center md:w-75 md:h-75"
               onClick={() => window.open(ele["repo-link"], "_blank")}
             >

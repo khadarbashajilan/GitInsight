@@ -52,3 +52,7 @@
 @utility repos {
   @apply lg:text-lg text-sm;
 }
+
+/* @utility loader{
+  @apply ;
+} */
