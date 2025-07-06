@@ -6,11 +6,11 @@
     color: white;
   }
   nav {
-    @apply backdrop-blur-xl shadow-xl fixed w-full md:p-3 p-2;
+    @apply backdrop-blur-xl shadow-xl fixed w-full h-12 md:p-4 p-3;
     div {
       @apply flex items-center md:gap-3 gap-2 px-2;
-      img {
-        @apply h-8 w-8 md:h-9 md:w-9;
+      .logo {
+        @apply h-8 w-8 md:h-10 md:w-10;
       }
       /* h1{
                 @aaply ;

@@ -1,22 +1,24 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import { useState } from "react";
+import {   useState } from "react";
 import Landingpage from "./components/Landingpage";
-import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard"
-
+import Repositories from "./components/Repositories";
+import { Route, Routes } from 'react-router-dom';
 function App() {
   const [ Sharedata, setSharedata]= useState('');
+  const [ Username, setUsername]= useState('');
 
   const setData= (data)=>{
     setSharedata(data);
+    setUsername(data.login);
   }
+
   return (
     <>
-      <Navbar></Navbar>
-      <Landingpage setData={setData}></Landingpage>
-      <Dashboard data={Sharedata}></Dashboard>
+      <Routes>
+        <Route path="/" element={<Landingpage setData={setData}></Landingpage>}></Route >
+        <Route path="/dashboard" element={<Dashboard data={Sharedata}></Dashboard>}></Route>
+        <Route path="/repos" element={<Repositories username={Username}></Repositories>}></Route>
+      </Routes>
     </>
   );
 }

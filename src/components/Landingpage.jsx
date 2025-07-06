@@ -5,6 +5,8 @@ import analyze from "../assets/landingpage/analyze.svg";
 import search from "../assets/landingpage/search.svg";
 import Popularrepos from "./landinpagecomponents/Popularrepos";
 import axios from 'axios';
+import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
 
 const Landingpage = ({setData}) => {
@@ -13,6 +15,7 @@ const Landingpage = ({setData}) => {
   const [isLoading, setisLoading]= useState(false);
   const [error, setError]= useState(false);
 
+  const navigate= useNavigate();
   // const[reopsData,setreposData]=useState();
   
   const handleSubmit=(e)=>{
@@ -34,7 +37,9 @@ const Landingpage = ({setData}) => {
     console.log(result);
     setData(result);
     setisLoading(false);
+    setError(false);
     setusername('');
+    navigate("/dashboard");
   } catch (e) {
     console.log("ERROR: ", e.message); 
     setError(true);
@@ -46,6 +51,7 @@ const Landingpage = ({setData}) => {
 
   return (
     <>
+      <Navbar></Navbar>
       {isLoading && (
           <div className="loader flex h-screen overflow-hidden flex-col items-center justify-center space-y-4">
             <div className="relative w-20 h-20">
