@@ -1,8 +1,6 @@
 import React from "react";
 import repos from "./github_repos.json";
 const Popularrepos = () => {
-  // console.log(repos);
-
   return (
     <>
       <div
@@ -24,7 +22,6 @@ const Popularrepos = () => {
                 {ele.title}{" "}
               </h1>
               <p className="repos">{ele.description}</p>
-              {/* <p className="md:text-md lg:text-lg text-sm">{ele.description}</p> */}
             </div>
           );
         })}
