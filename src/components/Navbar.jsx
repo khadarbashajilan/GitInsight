@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav>
       <div>
         <img className="logo" src={logo} />
-        <h1>GithubInsight</h1>
+        <h1>GitInsight</h1>
       </div>
     </nav>
   );

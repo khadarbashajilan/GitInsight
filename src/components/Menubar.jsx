@@ -39,7 +39,7 @@ const Menubar = () => {
                         className='h-5 w-5 cursor-pointer md:h-9 md:w-9'
                         alt="Toggle Menu"
                     />
-                    <h1 className="text-xl font-bold">GithubInsight</h1>
+                    <h1 className="text-xl font-bold">GitInsight</h1>
                 </div>
             </nav>
 
