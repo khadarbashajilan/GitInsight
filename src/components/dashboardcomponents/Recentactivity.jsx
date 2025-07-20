@@ -65,14 +65,16 @@ const Recentactivity = ({ username }) => {
       <h1 className="justify-center pb-5 border-b-2 border-b-blue-500 text-md font-bold ps-3">
         Recent Activities
       </h1>
-      {isLoading && (
+      {isLoading ? (
         <div className="loader flex h-screen overflow-hidden flex-col items-center justify-center space-y-4">
           <div className="relative w-20 h-20">
             <div className="absolute inset-0 border-4 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
           </div>
           <p className="text-gray-400">Fetching GitHub data...</p>
         </div>
-      )}
+      ):(
+        <>
+      
       {/* if the recendata state is undefined or null */}
       {!recentdata.length ? (
         <div className="h-80 w-full flex justify-center items-center">
@@ -108,6 +110,7 @@ const Recentactivity = ({ username }) => {
           })}
         </div>
       )}
+      </>)}
     </div>
   );
 };

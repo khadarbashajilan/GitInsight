@@ -57,15 +57,15 @@ const Landingpage = ({ setData }) => {
     <>
       <Navbar></Navbar>
       {/* loader */}
-      {isLoading && (
+      {isLoading ? (
         <div className="loader flex h-screen overflow-hidden flex-col items-center justify-center space-y-4">
           <div className="relative w-20 h-20">
             <div className="absolute inset-0 border-4 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
           </div>
           <p className="text-gray-400">Fetching GitHub data...</p>
         </div>
-      )}
-
+      ):
+      (<>
       {/* main page */}
       <section className="home-page1">
         <div>
@@ -135,6 +135,7 @@ const Landingpage = ({ setData }) => {
           <Popularrepos></Popularrepos>
         </div>
       </section>
+      </>)}
     </>
   );
 };
