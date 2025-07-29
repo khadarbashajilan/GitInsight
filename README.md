@@ -1,104 +1,118 @@
-# GithubInsight
+# GitInsight
 
-GithubInsight fetches and displays GitHub profile details—including profile picture, username, followers/following counts, repository stats, recent activity, and a full repository list. Built with React and the GitHub API, it provides a clean, fast way to view key user data at a glance.
+A modern GitHub profile explorer built with React, Vite, and Tailwind CSS. GitInsight lets you search any GitHub username and instantly view their profile, repositories, and recent activity—all in a clean, responsive UI.
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+---
 
-- React.js – Frontend UI and state management
+## ✨ Features
 
-- GitHub REST API – Fetches user profiles, repos, and activity
+- **Profile Overview**  
+  View profile picture, username, bio, followers, following, and public repo count.
 
-- Tailwind CSS – Responsive styling and modern UI
+- **Repository Insights**  
+  Browse a complete list of public repositories with descriptions, languages, and last update info.
 
-- Vite – Fast build tool for development
+- **Activity Feed**  
+  See a timeline of recent GitHub activity (commits, PRs, forks, etc.).
 
-- Axios – Handles API requests to GitHub
+- **Quick Search**  
+  Instantly look up any GitHub user by username, with error handling for invalid profiles.
 
-- React Router – Navigation and dynamic routing
+- **Responsive Design**  
+  Works seamlessly on desktop and mobile.
 
-## <a name="features">🔋 Features</a>
+- **Modern UI**  
+  Built with Tailwind CSS for a sleek, accessible interface.
 
-👉 Profile Overview
+---
 
-Display user's profile picture, username, bio
+## 🛠️ Technologies Used
 
-Show followers & following counts
+### Core Stack
 
-Total public repositories count
+- **React 19** – UI and state management
+- **Vite** – Lightning-fast development and build tool
+- **Axios** – API requests to GitHub
+- **React Router DOM 7** – Navigation and routing
 
-👉 Repository Insights
+### Styling
 
-Complete list of user's repositories
+- **Tailwind CSS 4** – Utility-first, responsive styling
 
-👉 Activity Feed
+### Development Tools
 
-Recent GitHub activity timeline
+- **ESLint** – Code quality and linting
 
-Track pushes, commits, PRs, and issues
+---
 
-👉 Quick Search
+## 🗂️ Application Structure
 
-Instant username lookup
+- **src/components/** – Reusable UI components (Navbar, Menubar, Dashboard, Repositories, etc.)
+- **src/assets/** – Images and SVGs for UI
+- **src/pages/** – Main screens (Landing page, Dashboard, Repositories)
+- **src/** – App entry point and global styles
 
-Error handling for invalid profiles
+---
 
-👉 Responsive Design
+## 🔄 Data Flow
 
-Mobile-friendly interface
+- **State Management**  
+  Uses React hooks (`useState`, `useEffect`) for local and shared state.
 
+- **API Integration**  
+  Fetches user profile, repositories, and activity from the GitHub REST API using Axios.
 
-👉 Performance Optimized
+- **Navigation**  
+  React Router DOM manages navigation between the landing page, dashboard, and repositories.
 
-Cached API responses
+---
 
-Skeleton loading states
+## 🚦 How It Works
 
-Efficient pagination
+1. **Landing Page**  
+   Enter a GitHub username to search.  
+   See a quick intro and popular open-source repositories.
 
-...with clean code architecture and reusable components
+2. **Dashboard**  
+   View the selected user's profile, followers, following, and recent activity.
 
-## <a name="quick-start">🤸 Quick Start</a>
+3. **Repositories**  
+   Browse all public repositories for the user, with quick links to GitHub.
 
-Follow these steps to set up the project locally on your machine.
+---
 
-**Prerequisites**
+## 🚀 Getting Started
 
-Make sure you have the following installed on your machine:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/khadarbashajilan/Gitinsight.git
+   cd Gitinsight
+   ```
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-**Cloning the Repository**
+3. **Set up environment variables**  
+   Create a `.env.local` file in the root:
+   ```env
+   VITE_GITHUB_TOKEN=your_personal_access_token_here
+   ```
+   > Get a token from GitHub Settings > Developer Settings.
 
-```bash
-git clone https://github.com/khadarbashajilan/Gitinsight.git
-cd Gitinsight
-```
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-**Installation**
+---
 
-Install the project dependencies using npm:
+## 🙌 Contributing
 
-```bash
-npm install
-```
+Pull requests welcome! For major changes, please open an issue first to discuss what you’d like to change.
 
-**Set Up Environment Variables**
+---
 
-Create a new file named `.env.local` in the root of your project and add the following content:
-
-```env
-VITE_GITHUB_TOKEN=your_personal_access_token_here
-
-```
-
-Get tokens from GitHub Settings > Developer Settings
-
-**Running the Project**
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
+**GitInsight** – Instantly explore any GitHub profile.
