@@ -22,9 +22,8 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes, {
-  errorElement: <Landingpage />, // Add errorElement at the root level
-});function App() {
+const router = createBrowserRouter(routes);
+function App() {
   return (
     <>
       <GitProvider>
