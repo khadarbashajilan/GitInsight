@@ -1,53 +1,19 @@
-import React, { useEffect, useState } from "react";
 import code from "../assets/repositoriespage/code.svg";
-import axios from "axios";
 import Menubar from "./Menubar";
 import { useGit } from "../context/GitContext";
+import { useNavigate } from "react-router-dom";
 const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
 
 const Repositories = () => {
 
-  const {Username} = useGit()
+  const {isLoading, Reposlist, data} = useGit()
+  const navigate = useNavigate()
 
-  
-  // Reposlist -> stores the json data (array of objects) which is returned from the API
-  const [Reposlist, setReposlist] = useState([]);
-  // loader
-  const [isLoading, setisLoading] = useState(true);
-  
-  const FetchRepos = async (username) => {
-    try {
-      const res = await axios.get(
-        `https://api.github.com/users/${username}/repos`,
-        {
-          headers: {
-            Authorization: `Bearer ${API_KEY}`,
-          },
-        }
-      );
-      const repos = res.data;
-      const obj = repos.map((item) => ({
-        name: item?.name ?? "-",
-        description: item?.description
-          ? item.description.length > 100
-            ? `${item.description.substring(0, 100).trim()} ...`
-            : item.description.trim()
-          : "no description",
-        language: item?.language ?? "-",
-        updated: item?.updated_at?.slice(0, 10) ?? "-",
-        link: item?.html_url ?? "#",
-      }));
-      setReposlist(obj);
-      setisLoading(false);
-    } catch (e) {
-      console.log(e, "ERROR");
-      setisLoading(false);
-    }
-  };
+  // Error handling for page refresh : 
+  if(!data){
+    navigate("/")
+  }
 
-  useEffect(() => {
-    FetchRepos(Username);
-  }, [Username]);
 
   return (
     <>

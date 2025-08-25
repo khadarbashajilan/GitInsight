@@ -5,10 +5,17 @@ import following from "../assets/dashboardpage/following.svg";
 import Menubar from "./Menubar";
 import Recentactivity from "./dashboardcomponents/Recentactivity";
 import { useGit } from "../context/GitContext";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  const {Sharedata} = useGit()
-  const data = Sharedata
+  const {data} = useGit()
+
+  const navigate = useNavigate()
+
+  // Error handling for page refresh : 
+  if(!data){
+    navigate("/")
+  }
 
   // The prop "data" containd the all the data of username according to endpoint and doc of API.
   let obj = {

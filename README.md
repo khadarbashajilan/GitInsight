@@ -57,7 +57,7 @@ A modern GitHub profile explorer built with React, Vite, and Tailwind CSS. GitIn
 ## 🔄 Data Flow
 
 - **State Management**  
-  Uses React hooks (`useState`, `useEffect`) for local and shared state.
+  Uses Context API for local and shared state.
 
 - **API Integration**  
   Fetches user profile, repositories, and activity from the GitHub REST API using Axios.
