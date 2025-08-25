@@ -5,16 +5,19 @@ import Menubar from "./Menubar";
 import Recentactivity from "./dashboardcomponents/Recentactivity";
 import { useGit } from "../context/GitContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Dashboard = () => {
-  const {data} = useGit()
+  const { data } = useGit();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  // Error handling for page refresh : 
-  if(!data){
-    navigate("/")
-  }
+  // Error handling for page refresh :
+  useEffect(() => {
+    if (!data) {
+      navigate("/");
+    }
+  },[data]);
 
   // The prop "data" containd the all the data of username according to endpoint and doc of API.
   let obj = {

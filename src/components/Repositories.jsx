@@ -2,6 +2,7 @@ import code from "../assets/repositoriespage/code.svg";
 import Menubar from "./Menubar";
 import { useGit } from "../context/GitContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
 
 const Repositories = () => {
@@ -10,9 +11,11 @@ const Repositories = () => {
   const navigate = useNavigate()
 
   // Error handling for page refresh : 
-  if(!data){
-    navigate("/")
-  }
+  useEffect(()=>{
+    if(!data){
+      navigate("/")
+    }
+  }, [data])
 
 
   return (

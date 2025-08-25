@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
@@ -22,6 +22,7 @@ export default function GitProvider({ children }) {
       console.log(result);
       setdata(result);
       setError(false);
+      FetchRepos(Username);
     } catch (e) {
       console.log("ERROR: ", e.message);
       setError(true);
@@ -66,10 +67,9 @@ export default function GitProvider({ children }) {
   };
 
 
-  useEffect(() => {
-    FetchRepos(Username);
+  // useEffect(() => {
     
-  }, [Username]);
+  // }, [Username]);
 
   return (
     <GitContext.Provider
