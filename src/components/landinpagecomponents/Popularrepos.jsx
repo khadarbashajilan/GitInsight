@@ -1,4 +1,3 @@
-import React from "react";
 import repos from "./github_repos.json";
 const Popularrepos = () => {
   return (

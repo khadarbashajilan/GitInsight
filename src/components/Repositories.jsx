@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import code from "../assets/repositoriespage/code.svg";
 import axios from "axios";
 import Menubar from "./Menubar";
+import { useGit } from "../context/GitContext";
 const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
 
-const Repositories = ({ username }) => {
+const Repositories = () => {
+
+  const {Username} = useGit()
+
+  
   // Reposlist -> stores the json data (array of objects) which is returned from the API
   const [Reposlist, setReposlist] = useState([]);
   // loader
   const [isLoading, setisLoading] = useState(true);
-
+  
   const FetchRepos = async (username) => {
     try {
       const res = await axios.get(
@@ -41,8 +46,8 @@ const Repositories = ({ username }) => {
   };
 
   useEffect(() => {
-    FetchRepos(username);
-  }, [username]);
+    FetchRepos(Username);
+  }, [Username]);
 
   return (
     <>

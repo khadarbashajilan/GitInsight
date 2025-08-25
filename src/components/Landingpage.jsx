@@ -7,16 +7,20 @@ import Popularrepos from "./landinpagecomponents/Popularrepos";
 import axios from "axios";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
+import { useGit } from "../context/GitContext";
 const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
 
-const Landingpage = ({ setData }) => {
+const Landingpage = () => {
+
+  const {setSharedata, setUsername} = useGit()
+
+  const [trackUserip, settrackUserip] = useState()
   // username -> to get from the username from user as he will enter in input>
-  const [username, setusername] = useState("");
   // toggling loader untill data is fetched or returned something
   const [isLoading, setisLoading] = useState(false);
   // ""Invalid username" -> popped below input> if the username is wrong or didnt match from API
   const [error, setError] = useState(false);
-
+  
   // to naviagate to dashboard page that is next page
   const navigate = useNavigate();
 
@@ -24,32 +28,33 @@ const Landingpage = ({ setData }) => {
   const handleSubmit = (e) => {
     setisLoading(true);
     e.preventDefault();
-    username.trim();
-    fetchUserprofile(username);
+    trackUserip.trim();
+    fetchUserprofile(trackUserip);
+    setUsername(trackUserip)
+    settrackUserip("")
+      navigate("/dashboard");
+
   };
 
   // The function to call API
-  const fetchUserprofile = async (username) => {
+  const fetchUserprofile = async (Username) => {
     try {
-      const res = await axios.get(`https://api.github.com/users/${username}`, {
+      const res = await axios.get(`https://api.github.com/users/${Username}`, {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
         },
       });
       const result = res.data;
       console.log(result);
-      setData(result);
+      setSharedata(result);
       setisLoading(false);
       setError(false);
-      setusername("");
-      //to direct ->dashboard page
-      navigate("/dashboard");
     } catch (e) {
       console.log("ERROR: ", e.message);
       setError(true);
       // If there is error Invalid Username will be displayed in UI, using error state toggler 
       setisLoading(false);
-      setusername("");
+      setUsername("");
     }
   };
 
@@ -81,8 +86,9 @@ const Landingpage = ({ setData }) => {
           <form onSubmit={(e) => handleSubmit(e)}>
             <input
               type="text"
+              value={trackUserip}
               list="username-options"
-              onChange={(e) => setusername(e.target.value)}
+              onChange={(e) => settrackUserip(e.target.value)}
               placeholder="Enter GitHub Username "
             />
             {/* These datalist are just some random usernames to select. coz, some guyz just forget their usernames so, lol*/}

@@ -1,24 +1,36 @@
-import {   useState } from "react";
 import Landingpage from "./components/Landingpage";
-import Dashboard from "./components/Dashboard"
+import Dashboard from "./components/Dashboard";
 import Repositories from "./components/Repositories";
-import { Route, Routes } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
+import GitProvider from "./context/GitContext";
+
+const routes = [
+  {
+    path: "/",
+    element: <Landingpage></Landingpage>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+  },
+  {
+    path: "/repos",
+    element: <Repositories></Repositories>,
+  },
+];
+
+const router = createBrowserRouter(routes);
 function App() {
-  const [ Sharedata, setSharedata]= useState('');
-  const [ Username, setUsername]= useState('');
-
-  const setData= (data)=>{
-    setSharedata(data);
-    setUsername(data.login);
-  }
-
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Landingpage setData={setData}></Landingpage>}></Route >
-        <Route path="/dashboard" element={<Dashboard data={Sharedata}></Dashboard>}></Route>
-        <Route path="/repos" element={<Repositories username={Username}></Repositories>}></Route>
-      </Routes>
+      <GitProvider>
+        <RouterProvider router={router} />
+      </GitProvider>
     </>
   );
 }
