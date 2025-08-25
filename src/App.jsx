@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
   Route,
   RouterProvider,
-  Routes,
 } from "react-router-dom";
 import GitProvider from "./context/GitContext";
 
