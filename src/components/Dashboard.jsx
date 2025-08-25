@@ -1,4 +1,4 @@
-import reposcount from "../assets/dashboardpage/reposnum.svg";
+import reposimg from "../assets/dashboardpage/reposnum.svg";
 import followers from "../assets/dashboardpage/followers.svg";
 import following from "../assets/dashboardpage/following.svg";
 import Menubar from "./Menubar";
@@ -82,7 +82,7 @@ const Dashboard = () => {
                 <img
                   height={"15px"}
                   width={"15px"}
-                  src={reposcount}
+                  src={reposimg}
                   alt="Respositories count"
                   className="hidden md:block"
                 />
