@@ -3,20 +3,17 @@ import Menubar from "./Menubar";
 import { useGit } from "../context/GitContext";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-const API_KEY = import.meta.env.VITE_GITHUB_TOKEN;
-
 const Repositories = () => {
 
-  const {isLoading, Reposlist, data} = useGit()
-  const navigate = useNavigate()
+  const {isLoading, Reposlist, Username} = useGit()
 
-  // Error handling for page refresh : 
+    const nav = useNavigate()
+
   useEffect(()=>{
-    if(!data){
-      navigate("/")
+    if(!Username){
+      nav("/")
     }
-  }, [data])
-
+  },[])
 
   return (
     <>

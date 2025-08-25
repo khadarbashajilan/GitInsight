@@ -10,6 +10,7 @@ export default function GitProvider({ children }) {
   const [Username, setUsername] = useState("");
   const [error, setError] = useState(false);
   
+  
   // The function to call API
   const fetchUserprofile = async (Username) => {
     try {
@@ -19,7 +20,6 @@ export default function GitProvider({ children }) {
         },
       });
       const result = profile.data;
-      console.log(result);
       setdata(result);
       setError(false);
       FetchRepos(Username);
@@ -63,13 +63,10 @@ export default function GitProvider({ children }) {
     } catch (e) {
       console.log(e, "ERROR");
       setisLoading(false);
+      setError(true)
     }
   };
 
-
-  // useEffect(() => {
-    
-  // }, [Username]);
 
   return (
     <GitContext.Provider
