@@ -24,7 +24,7 @@ const Landingpage = () => {
     setUsername(trackUserip);
     setisLoading(false);
     settrackUserip("");
-    navigate("/dashboard");
+    if(!error)navigate("/dashboard");
   };
 
 
