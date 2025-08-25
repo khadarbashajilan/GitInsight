@@ -1,6 +1,6 @@
 import reposimg from "../assets/dashboardpage/reposnum.svg";
-import followers from "../assets/dashboardpage/followers.svg";
-import following from "../assets/dashboardpage/following.svg";
+import followersimg from "../assets/dashboardpage/followers.svg";
+import followingimg from "../assets/dashboardpage/following.svg";
 import Menubar from "./Menubar";
 import Recentactivity from "./dashboardcomponents/Recentactivity";
 import { useGit } from "../context/GitContext";
@@ -62,7 +62,7 @@ const Dashboard = () => {
                 <img
                   height={"15px"}
                   width={"15px"}
-                  src={followers}
+                  src={followersimg}
                   alt="Followers"
                   className="hidden md:block"
                 />
@@ -72,7 +72,7 @@ const Dashboard = () => {
                 <img
                   height={"15px"}
                   width={"15px"}
-                  src={following}
+                  src={followingimg}
                   alt="Following"
                   className="hidden md:block"
                 />
