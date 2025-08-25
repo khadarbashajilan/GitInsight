@@ -3,7 +3,6 @@ import Dashboard from "./components/Dashboard";
 import Repositories from "./components/Repositories";
 import {
   createBrowserRouter,
-  Route,
   RouterProvider,
 } from "react-router-dom";
 import GitProvider from "./context/GitContext";
@@ -23,8 +22,9 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes);
-function App() {
+const router = createBrowserRouter(routes, {
+  errorElement: <Landingpage />, // Add errorElement at the root level
+});function App() {
   return (
     <>
       <GitProvider>
