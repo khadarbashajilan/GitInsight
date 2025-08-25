@@ -1,4 +1,3 @@
-import React from "react";
 import reposcount from "../assets/dashboardpage/reposnum.svg";
 import followers from "../assets/dashboardpage/followers.svg";
 import following from "../assets/dashboardpage/following.svg";
